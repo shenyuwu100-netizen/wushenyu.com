@@ -198,3 +198,30 @@ h2 { margin: 0; font-size: clamp(34px, 5vw, 58px); line-height: 1.05; letter-spa
   .skill-grid > div { grid-template-columns: 1fr; gap: 4px; }
   .footer { flex-direction: column; gap: 6px; }
 }
+
+/* Case studies */
+.case { padding-top: 96px; }
+.case-title { max-width: 980px; font-size: clamp(52px, 8vw, 96px); }
+.case-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+.case-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 64px 0 10px; }
+.metric { min-height: 180px; padding: 24px; border: 1px solid var(--line); border-radius: 20px; background: rgba(255,255,255,.68); display: flex; flex-direction: column; }
+.metric span { color: var(--muted); font-size: 12px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+.metric strong { margin-top: 16px; font-size: 42px; line-height: 1; letter-spacing: -.04em; }
+.metric small { margin-top: auto; color: var(--muted); }
+.case-section p { color: var(--muted); font-size: 17px; }
+.case-flow { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; padding: 24px; border: 1px solid var(--line); border-radius: 18px; background: rgba(255,255,255,.58); }
+.case-flow code { padding: 8px 10px; border-radius: 9px; background: var(--accent-soft); color: var(--accent); font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-weight: 700; }
+.case-flow b { color: var(--muted); }
+.case-points { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 18px; }
+.case-points > div { padding: 22px 0; border-top: 1px solid var(--line); }
+.case-points strong { font-size: 18px; }
+.flagship { border-color: #bfd0c4; background: linear-gradient(180deg, rgba(255,255,255,.86), rgba(236,244,239,.72)); }
+.case-shot { margin: 34px 0 0; padding: 12px; border: 1px solid var(--line); border-radius: 24px; background: rgba(255,255,255,.72); box-shadow: var(--shadow); }
+.case-shot img { width: 100%; display: block; border-radius: 16px; }
+.case-shot figcaption { padding: 10px 4px 2px; color: var(--muted); font-size: 13px; }
+
+@media (max-width: 820px) {
+  .case { padding-top: 64px; }
+  .case-grid, .case-points { grid-template-columns: 1fr; }
+  .metric { min-height: 150px; }
+}

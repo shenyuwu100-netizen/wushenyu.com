@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Agent Workflow Studio — Shenyu Wu applied AI case study." />
+  <link rel="canonical" href="https://wushenyu.com/case-agent-studio.html" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <title>Agent Workflow Studio — Shenyu Wu</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header"><a class="brand" href="/">Shenyu Wu</a><nav><a href="/#projects">Projects</a><a href="resume-public.pdf">Resume</a></nav></header>
+  <main class="case shell">
+    <p class="eyebrow">Applied AI Case Study · 2026</p>
+    <h1 class="case-title">Agent Workflow Studio</h1>
+    <p class="lede">A framework-light tool-using agent runtime designed around the engineering details that matter after the demo: policies, approvals, retries, budgets and traces.</p>
+    <div class="case-actions"><a class="button primary" href="https://github.com/shenyuwu100-netizen/agent-workflow-studio" target="_blank" rel="noopener">View repository ↗</a><a class="button" href="/">Back home</a></div>
+
+    <section class="case-grid">
+      <div class="metric"><span>Automated tests</span><strong>3/3</strong><small>Calculator, approval pause, approved continuation</small></div>
+      <div class="metric"><span>Trace storage</span><strong>SQLite</strong><small>Inputs, outputs, latency, status and errors</small></div>
+      <div class="metric"><span>Safety model</span><strong>HITL</strong><small>Side-effect-class tools require approval</small></div>
+    </section>
+    <figure class="case-shot"><img src="assets/agent-studio-demo.png" alt="Agent Workflow Studio browser interface" /><figcaption>Browser demo for running deterministic tool workflows and inspecting the execution timeline.</figcaption></figure>
+
+    <section class="section case-section">
+      <div class="section-label">Problem</div>
+      <div class="split"><h2>“The agent called a tool” is not enough to debug or trust the workflow.</h2><div><p>The runtime makes policy decisions visible. A tool has an explicit risk class, each execution creates a trace span, and workflows can pause before actions that belong behind human approval.</p><p>Offline deterministic planning keeps the orchestration contract testable without pretending the project is a fully autonomous production agent.</p></div></div>
+    </section>
+
+    <section class="section case-section">
+      <div class="section-label">System</div>
+      <div class="case-flow"><code>goal</code><b>→</b><code>planner</code><b>→</b><code>budget</code><b>→</b><code>policy gate</code><b>→</b><code>tool</code><b>→</b><code>trace</code></div>
+      <div class="case-points"><div><strong>Tool registry</strong><p>Tools publish a name, purpose and risk class; arithmetic uses a restricted AST evaluator instead of unsafe eval.</p></div><div><strong>Human approval</strong><p>The research workflow pauses before a side-effect-class draft step unless approval is explicitly provided.</p></div><div><strong>Observability</strong><p>SQLite spans record inputs, outputs, latency, errors and status so execution can be inspected after the run.</p></div></div>
+    </section>
+
+    <section class="section case-section">
+      <div class="section-label">Engineering choice</div>
+      <div class="split"><h2>Agent orchestration before agent hype.</h2><div><p>The project focuses on runtime primitives rather than claiming autonomous capability. The deterministic planner is intentionally replaceable by an LLM planner later.</p><p>The architecture is informed by public workflow/agent patterns documented in the LangGraph ecosystem, while the implementation and UI are independent.</p></div></div>
+    </section>
+  </main>
+  <footer class="shell footer"><span>© 2026 Shenyu Wu</span><a href="mailto:hi@wushenyu.com">hi@wushenyu.com</a></footer>
+</body>
+</html>

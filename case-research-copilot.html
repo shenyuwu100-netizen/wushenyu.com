@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Evidence Research Copilot — Shenyu Wu applied AI case study." />
+  <link rel="canonical" href="https://wushenyu.com/case-research-copilot.html" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <title>Evidence Research Copilot — Shenyu Wu</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header"><a class="brand" href="/">Shenyu Wu</a><nav><a href="/#projects">Projects</a><a href="resume-public.pdf">Resume</a></nav></header>
+  <main class="case shell">
+    <p class="eyebrow">Applied AI Case Study · 2026</p>
+    <h1 class="case-title">Evidence Research Copilot</h1>
+    <p class="lede">A small, inspectable research assistant built to make retrieval quality and evidence tracing visible instead of treating RAG as a black box.</p>
+    <div class="case-actions"><a class="button primary" href="https://github.com/shenyuwu100-netizen/evidence-research-copilot" target="_blank" rel="noopener">View repository ↗</a><a class="button" href="/">Back home</a></div>
+
+    <section class="case-grid">
+      <div class="metric"><span>Demo Recall@K</span><strong>1.00</strong><small>4-case synthetic regression set, K=3</small></div>
+      <div class="metric"><span>Demo MRR</span><strong>1.00</strong><small>Reproducible locally</small></div>
+      <div class="metric"><span>Citation validity</span><strong>1.00</strong><small>Source IDs verified against retrieved chunks</small></div>
+    </section>
+    <figure class="case-shot"><img src="assets/research-copilot-demo.png" alt="Evidence Research Copilot browser interface" /><figcaption>Offline browser demo. The repository includes the FastAPI app and a deterministic evaluation command.</figcaption></figure>
+
+    <section class="section case-section">
+      <div class="section-label">Problem</div>
+      <div class="split"><h2>RAG demos often show an answer, but hide why the system trusted it.</h2><div><p>I wanted the portfolio project to expose the retrieval path directly: lexical rank, semantic-style rank, fused rank, selected evidence and citations.</p><p>The offline core avoids an API dependency so a reviewer can reproduce the retrieval and evaluation behavior without credentials.</p></div></div>
+    </section>
+
+    <section class="section case-section">
+      <div class="section-label">System</div>
+      <div class="case-flow"><code>documents</code><b>→</b><code>chunking</code><b>→</b><code>BM25 + TF-IDF</code><b>→</b><code>RRF</code><b>→</b><code>grounded synthesis</code><b>→</b><code>citations</code></div>
+      <div class="case-points"><div><strong>Hybrid retrieval</strong><p>Exact terminology is handled by BM25 while TF-IDF cosine contributes a second independent ranking signal.</p></div><div><strong>Rank fusion</strong><p>Reciprocal-rank fusion combines ranked lists without pretending the raw scores are calibrated to the same scale.</p></div><div><strong>Evaluation</strong><p>A committed evaluation set measures retrieval recall, MRR and citation validity on every regression run.</p></div></div>
+    </section>
+
+    <section class="section case-section">
+      <div class="section-label">Engineering choice</div>
+      <div class="split"><h2>Framework-light on purpose.</h2><div><p>The retrieval and fusion logic is implemented directly so I can explain each stage. FastAPI is only the interface layer.</p><p>The project takes inspiration from evaluation-first RAG tooling such as Ragas, but does not copy Ragas source code or assets.</p></div></div>
+    </section>
+  </main>
+  <footer class="shell footer"><span>© 2026 Shenyu Wu</span><a href="mailto:hi@wushenyu.com">hi@wushenyu.com</a></footer>
+</body>
+</html>
