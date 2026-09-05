@@ -55,34 +55,34 @@ li { margin:1.7px 0; }
     <strong>Applied AI</strong><span>RAG / hybrid retrieval, tool calling, agent workflows, human-in-the-loop, evaluation, tracing / observability</span>
     <strong>Engineering</strong><span>Python, FastAPI, REST APIs, SQLite, Git; reproducible demos, tests and API-layer implementation</span>
     <strong>Data & ML</strong><span>NumPy, Pandas, Scikit-learn, LightGBM; data cleaning, feature engineering, model evaluation and time-series validation</span>
-    <strong>Other</strong><span>C/C++, SQL, Jupyter, VS Code, LaTeX; OpenAI API, Claude Code and Antigravity for AI-assisted engineering workflows</span>
+    <strong>AI Engineering Tools</strong><span>OpenAI API, Claude Code and Antigravity; familiar with AI-assisted development workflows</span>
   </div>
 </section>
 
 <section>
   <h2>Selected AI Projects</h2><div class="rule"></div>
   <div class="project">
-    <div class="row"><div class="role">Evidence Research Copilot · Independent Project</div><div class="meta">2026</div></div>
+    <div class="row"><div class="role"><a href="https://wushenyu.com/case-research-copilot.html">Evidence Research Copilot ↗</a> · Independent Project</div><div class="meta">2026</div></div>
     <div class="stack">RAG · BM25 · TF-IDF · Reciprocal Rank Fusion · Evaluation · FastAPI</div>
     <ul>
-      <li>Built an evidence-grounded research assistant that chunks local documents, retrieves with BM25 and TF-IDF, and fuses independent rankings with Reciprocal Rank Fusion.</li>
-      <li>Exposed source chunks, ranking signals and citations through the answer pipeline so retrieval evidence remains inspectable instead of hidden behind a black-box response.</li>
-      <li>Added a reproducible regression evaluation suite for Recall@K, MRR and citation validity, plus a FastAPI/browser demo that runs without a paid model API.</li>
+      <li>Built an evidence-grounded research assistant with BM25 and TF-IDF retrieval, fused through Reciprocal Rank Fusion.</li>
+      <li>Exposed source chunks, ranking signals and citations so the retrieval evidence remains inspectable.</li>
+      <li>Added reproducible Recall@K, MRR and citation-validity regression checks, plus a FastAPI/browser demo that runs without a paid model API.</li>
     </ul>
   </div>
 
   <div class="project">
-    <div class="row"><div class="role">Agent Workflow Studio · Independent Project</div><div class="meta">2026</div></div>
+    <div class="row"><div class="role"><a href="https://wushenyu.com/case-agent-studio.html">Agent Workflow Studio ↗</a> · Independent Project</div><div class="meta">2026</div></div>
     <div class="stack">AI Agents · Tool Calling · Approval Gates · Retry / Budget · SQLite Tracing · FastAPI</div>
     <ul>
-      <li>Implemented a framework-light tool-using agent runtime with a planner, typed tool registry, execution budget, retry policy and explicit workflow state.</li>
-      <li>Added risk classes and human approval gates before side-effect-class tools; used a restricted AST evaluator for arithmetic rather than unsafe eval.</li>
-      <li>Persisted inputs, outputs, latency, errors and status to SQLite traces and surfaced them in a web execution timeline; tests cover tool execution and approval pause/continue behavior.</li>
+      <li>Implemented a framework-light tool-using agent runtime with a planner, typed tool registry, execution budget and retry policy.</li>
+      <li>Added risk classes and human approval gates before side-effect-class tools; arithmetic uses a restricted AST evaluator instead of unsafe eval.</li>
+      <li>Persisted inputs, outputs, latency, errors and status to SQLite traces and surfaced them in a web timeline; tests cover approval pause/continue behavior.</li>
     </ul>
   </div>
 
   <div class="project">
-    <div class="row"><div class="role">Intelligent Email Auto-Reply System · Core Developer</div><div class="meta">2025</div></div>
+    <div class="row"><div class="role">Intelligent Email Auto-Reply System · Core Developer · Course / Team Project</div><div class="meta">2025</div></div>
     <div class="stack">LLM Application · NLP · Confidence Routing · Human Review</div>
     <ul>
       <li>Designed an LLM-based customer-service email workflow for intent recognition, fine-grained classification and reply generation, with confidence-based routing between automation and human review.</li>
