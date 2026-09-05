@@ -40,6 +40,7 @@
     <nav>
       <a href="#about">About</a>
       <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
       <a href="#skills">Skills</a>
       <a href="resume-public.pdf" target="_blank" rel="noopener">Resume</a>
     </nav>
@@ -68,8 +69,8 @@
       <div class="section-content split">
         <h2>Building AI systems that can be inspected, evaluated and used.</h2>
         <div>
-          <p>I am pursuing a B.S. in Data Science and Big Data Technology at The Chinese University of Hong Kong, Shenzhen, with coursework spanning data structures, databases, machine learning, optimization, stochastic processes, probability and statistics.</p>
-          <p>My current focus is applied AI: retrieval-augmented systems, tool-using agents, evaluation, observability and product-grade interfaces around language models.</p>
+          <p>I am pursuing a B.S. in Data Science and Big Data Technology at The Chinese University of Hong Kong, Shenzhen, with coursework spanning data structures, database systems, machine learning, software engineering, stochastic simulation, probability and statistics.</p>
+          <p>My current focus is applied AI: LLM APIs, structured outputs, agent workflows, execution feedback, embedding retrieval and practical tool integrations.</p>
         </div>
       </div>
     </section>
@@ -77,40 +78,48 @@
       <div class="section-label">Selected projects</div>
       <div class="cards">
         <article class="card flagship">
+          <div class="card-meta">2026 · Agent / Fuzzing / Evaluation</div>
+          <h3>Feedback-Driven Automated Testing Agent</h3>
+          <p>Agent workflow for specification reading, test and metamorphic-relation generation, execution validation and feedback-driven follow-up testing, with explicit model-call and command budgets.</p>
+          <div class="card-links">CSC4001 course project extension · Local prototype</div>
+        </article>
+        <article class="card flagship">
+          <div class="card-meta">2026 · LLM / Microsoft Graph / SQLite</div>
+          <h3>Intelligent Email Processing & Human Review</h3>
+          <p>Customer-service email workflow for relevance detection and intent classification, combining reply templates, model outputs and confidence thresholds with human review, editing and failure-state tracking.</p>
+          <div class="card-links"><a href="https://github.com/shenyuwu100-netizen/Automatic-Email-Responder" target="_blank" rel="noopener">View repository ↗</a></div>
+        </article>
+        <article class="card">
           <div class="card-meta">2026 · RAG / Evaluation / FastAPI</div>
           <h3>Evidence Research Copilot</h3>
           <p>Hybrid BM25 + TF-IDF retrieval with reciprocal-rank fusion, inspectable source citations and a reproducible evaluation suite for grounded research workflows.</p>
           <div class="card-links"><a href="case-research-copilot.html">Case study →</a> · <a href="https://github.com/shenyuwu100-netizen/evidence-research-copilot" target="_blank" rel="noopener">Repository ↗</a></div>
         </article>
-        <article class="card flagship">
-          <div class="card-meta">2026 · AI Agents / Tool Use / Observability</div>
-          <h3>Agent Workflow Studio</h3>
-          <p>An inspectable tool-using agent runtime with execution budgets, retry policies, human approval gates and SQLite traces exposed through a FastAPI UI.</p>
-          <div class="card-links"><a href="case-agent-studio.html">Case study →</a> · <a href="https://github.com/shenyuwu100-netizen/agent-workflow-studio" target="_blank" rel="noopener">Repository ↗</a></div>
-        </article>
-        <article class="card">
-          <div class="card-meta">2025 · AI / NLP / LLM</div>
-          <h3>Intelligent Email Auto-Reply System</h3>
-          <p>LLM-powered email workflow with intent classification, confidence-based routing and a practical frontend/backend product structure.</p>
-          <div class="card-links"><a href="https://github.com/shenyuwu100-netizen/Automatic-Email-Responder" target="_blank" rel="noopener">View repository ↗</a></div>
-        </article>
       </div>
       <div class="more-projects">
         <span>More AI engineering:</span>
+        <a href="case-agent-studio.html">Agent Workflow Studio</a>
         <a href="https://github.com/shenyuwu100-netizen/model-inference-api" target="_blank" rel="noopener">Model Inference API</a>
         <a href="https://github.com/shenyuwu100-netizen/mini-transformer-attention" target="_blank" rel="noopener">Mini Transformer Attention</a>
         <a href="https://github.com/shenyuwu100-netizen/llm-tool-agent-sandbox" target="_blank" rel="noopener">LLM Tool Agent Sandbox</a>
       </div>
     </section>
+    <section id="experience" class="section shell compact">
+      <div class="section-label">Experience</div>
+      <div class="timeline-item">
+        <div><strong>ICBC Jiaxing Branch</strong><span>Jul–Aug 2026</span></div>
+        <p>FinTech Department intern. Researched AI-assisted scenarios for policy retrieval, document preparation and workflow coordination, and designed a multi-agent concept for branch operations covering customer service, employee assistance, risk/compliance, task orchestration, tool use and human confirmation.</p>
+      </div>
+    </section>
     <section id="skills" class="section shell">
       <div class="section-label">Capabilities</div>
       <div class="skill-grid">
-        <div><span>Programming</span><strong>Python · C/C++ · SQL</strong></div>
-        <div><span>Applied AI</span><strong>RAG · Tool Calling · Agent Workflows</strong></div>
-        <div><span>Evaluation</span><strong>Retrieval Metrics · Regression Tests · Trace Inspection</strong></div>
-        <div><span>Backend</span><strong>FastAPI · SQLite · REST APIs</strong></div>
-        <div><span>ML stack</span><strong>NumPy · Pandas · Scikit-learn · LightGBM</strong></div>
-        <div><span>Tools</span><strong>Git · VS Code · Jupyter · LaTeX</strong></div>
+        <div><span>LLM / Agent</span><strong>LLM APIs · Structured Output · Agent Workflows · Execution Feedback</strong></div>
+        <div><span>Retrieval / Tools</span><strong>Embedding Retrieval · MCP Tool Wrappers</strong></div>
+        <div><span>Engineering</span><strong>Python · Flask · FastAPI · REST APIs · SQLite · SQL · Git</strong></div>
+        <div><span>Testing</span><strong>Automated Testing · Fuzzing · Metamorphic Testing · Evaluation</strong></div>
+        <div><span>Data / ML</span><strong>NumPy · Pandas · Scikit-learn</strong></div>
+        <div><span>Workflow</span><strong>Interface Validation · Human Review · State Tracking</strong></div>
       </div>
     </section>
     <section class="section shell compact">
